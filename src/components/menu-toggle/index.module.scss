@@ -1,0 +1,21 @@
+.button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  display: none;
+}
+@media (max-width: 768px) {
+  .button {
+    display: block;
+  }
+}

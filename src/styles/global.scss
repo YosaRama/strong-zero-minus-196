@@ -4,5 +4,27 @@
 
 html,
 body {
-  overflow-y: hidden;
+  // overflow-y: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a {
+  transition: all 0.3s ease;
+}
+body.mobile_nav_open {
+  overflow: hidden;
+}
+
+.mobile_logo {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile_nav_open .mobile_logo {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 17px;
+  }
 }

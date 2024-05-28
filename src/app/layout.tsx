@@ -1,9 +1,14 @@
+import Preloader from '@/components/preloader'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Barlow_Semi_Condensed } from 'next/font/google'
 import '@/styles/global.scss'
 import MainContainer from '@/components/container'
 
-const inter = Inter({ subsets: ['latin'] })
+const barlow = Barlow_Semi_Condensed({
+  weight: ['300', '400', '700', '800'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={barlow.className}>
+        <Preloader />
         <MainContainer>{children}</MainContainer>
       </body>
     </html>

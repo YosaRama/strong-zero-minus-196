@@ -1,6 +1,6 @@
 import Footer from './footer'
 import Header from './header'
-import s from './index.module.scss'
+// import s from './index.module.scss'
 
 export default function MainContainer({
   children,
@@ -8,10 +8,10 @@ export default function MainContainer({
   children: React.ReactNode
 }>) {
   return (
-    <main className={s.container}>
+    <main>
       <Header />
 
-      <div>{children}</div>
+      {children}
 
       <Footer />
     </main>
