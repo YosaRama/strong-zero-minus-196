@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import s from './index.module.scss'
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true)
@@ -24,8 +25,9 @@ export default function Preloader() {
   }, [])
 
   return (
-    <div>
-      <div style={{ display: isLoading ? 'block' : 'none' }}>loading</div>
-    </div>
+    <div
+      className={s.loading_screen}
+      style={{ display: isLoading ? 'block' : 'none' }}
+    ></div>
   )
 }

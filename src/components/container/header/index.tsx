@@ -7,10 +7,11 @@ import { useEffect } from 'react'
 import Image from 'next/image'
 import s from './index.module.scss'
 
-import { motion, useCycle } from 'framer-motion'
+import { motion, useCycle, Variants } from 'framer-motion'
 import { MenuToggle } from '@/components/menu-toggle'
+import MobileNavigation from '@/components/mobile-navigation'
 
-const sidebar = {
+const sidebar: Variants = {
   open: (height = 500) => ({
     clipPath: `circle(${height * 2 + 200}px at calc(100% - 40px) 40px)`,
     position: 'absolute',
@@ -78,7 +79,7 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <motion.nav
+      <motion.div
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         className={s.mobile_nav}
@@ -91,8 +92,9 @@ export default function Header() {
           width={71}
           height={52}
         />
+        <MobileNavigation />
         <MenuToggle toggle={() => toggleOpen()} />
-      </motion.nav>
+      </motion.div>
     </>
   )
 }

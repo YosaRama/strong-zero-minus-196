@@ -26,5 +26,10 @@ body.mobile_nav_open {
     position: absolute;
     top: 14px;
     left: 17px;
+    z-index: 9999;
+  }
+  .mobile_nav_open .dropdown-mobile-nav {
+    display: block;
+    margin-top: 150px;
   }
 }

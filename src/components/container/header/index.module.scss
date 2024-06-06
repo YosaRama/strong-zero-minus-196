@@ -3,11 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 17px;
 }
 
 .logo {
   width: 115px;
+  flex-shrink: 0;
+  max-height: 86px;
 }
 
 .nav {
@@ -78,11 +80,13 @@
     display: none;
   }
   .mobile_nav {
-    // position: absolute;
+    // position: fixed;
     // top: 0;
     // left: 0;
     // bottom: 0;
-    // width: 100%;
+    // width: 100vw;
+    // height: 100vh;
+    z-index: 9997;
   }
   .mobile_nav_background {
     position: relative;
@@ -91,5 +95,9 @@
     bottom: 0;
     width: 100%;
     background: #000;
+    z-index: 9998;
+  }
+  .logo__img {
+    width: 63px;
   }
 }

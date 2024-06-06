@@ -1,14 +1,51 @@
+'use client'
 // import AnimateText from '@/components/common/animate-text'
 import s from './index.module.scss'
 import Image from 'next/image'
+import { motion, Variants } from 'framer-motion'
+import Button from '@/components/button'
+
+const lemonWrapVariants: Variants = {
+  offscreen: {
+    transition: { staggerChildren: 0.4, staggerDirection: -1 },
+  },
+  onscreen: {
+    transition: { staggerChildren: 0.4, delayChildren: 0.2 },
+  },
+}
+
+const lemonVariants: Variants = {
+  offscreen: {
+    y: 0,
+    scale: 0,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      type: 'spring',
+      stiffness: 500,
+      damping: 20,
+      delayChildren: 0.2,
+    },
+  },
+}
 
 export default function ContentsHomeLemonPop() {
   return (
     <>
       <section className={s.wrapper}>
         <div className={s.container}>
-          <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/3">
+          <motion.div
+            className="flex flex-wrap"
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={lemonWrapVariants}
+          >
+            <motion.div className="w-full lg:w-1/3" variants={lemonVariants}>
               <Image
                 className={s.pop_image}
                 src={'/assets/images/whole.png'}
@@ -16,8 +53,8 @@ export default function ContentsHomeLemonPop() {
                 width={600}
                 height={600}
               />
-            </div>
-            <div className="w-full lg:w-1/3">
+            </motion.div>
+            <motion.div className="w-full lg:w-1/3" variants={lemonVariants}>
               <Image
                 className={s.pop_image}
                 src={'/assets/images/freeze.png'}
@@ -25,8 +62,8 @@ export default function ContentsHomeLemonPop() {
                 width={600}
                 height={600}
               />
-            </div>
-            <div className="w-full lg:w-1/3">
+            </motion.div>
+            <motion.div className="w-full lg:w-1/3" variants={lemonVariants}>
               <Image
                 className={s.pop_image}
                 src={'/assets/images/crush.png'}
@@ -34,14 +71,17 @@ export default function ContentsHomeLemonPop() {
                 width={600}
                 height={600}
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className={`mx-auto text-center ${s.content}`}>
             <p className={s.text}>
-              Now, THIS is how you make MINUS 196! Shochu, Vodka, and Soda
-              collide with explosive fruit flavour. Our cutting-edge Freeze
-              Crush Technology™ locks in the intense taste of whole fruit –
-              crushed and infused in spirits for extreme liquid power.
+              Quench your thirst with MINUS 196, where vodka and soda meet bold
+              fruit flavour. Our cutting-edge Freeze Crush Technology™ locks in
+              a real fruit taste by freezing and crushing whole fruit, then
+              infusing it in spirits for a refreshing experience.
+            </p>
+            <p className="mt-20">
+              <Button text="DISCOVER MINUS 196" href="#" />
             </p>
           </div>
         </div>

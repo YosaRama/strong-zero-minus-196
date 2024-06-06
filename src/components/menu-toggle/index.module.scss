@@ -17,5 +17,6 @@
 @media (max-width: 768px) {
   .button {
     display: block;
+    z-index: 9999;
   }
 }

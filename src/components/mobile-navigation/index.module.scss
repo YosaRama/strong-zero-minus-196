@@ -1,0 +1,29 @@
+.mobile_nav {
+  z-index: 9999;
+  position: relative;
+  display: none;
+
+  ul li {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%; /* 16px */
+      text-transform: uppercase;
+      display: block;
+      padding: 20px;
+
+      &:hover,
+      &.active {
+        background: #fedd00;
+        color: #000;
+      }
+    }
+  }
+}

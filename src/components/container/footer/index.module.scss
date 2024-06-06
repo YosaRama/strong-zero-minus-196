@@ -49,6 +49,12 @@
 .social_media {
   margin-top: 56px;
 }
+
+.nav_content {
+  transform: scaleY(1);
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .logo__img {
     margin-left: auto !important;
@@ -64,5 +70,39 @@
     ul li {
       margin-bottom: 12px;
     }
+  }
+  .heading {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+  }
+  .heading.open {
+    margin-bottom: 21px;
+  }
+
+  .heading::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url('/assets/images/ic-chevron.svg') no-repeat center center;
+    background-size: contain;
+  }
+  .heading.open::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .nav_content {
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.2s ease-out;
+    height: 0;
+    overflow: hidden;
+  }
+  .nav_content.open {
+    transform: scaleY(1);
+    height: auto;
   }
 }

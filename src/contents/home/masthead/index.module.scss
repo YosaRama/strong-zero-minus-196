@@ -1,0 +1,19 @@
+.slick_item {
+  height: calc(100vh - 120px);
+}
+
+.masthead_carousel {
+  overflow: hidden;
+
+  :global {
+    .slick-prev {
+      left: 46px;
+      z-index: 99;
+    }
+
+    .masthead_carousel .slick-next {
+      right: 46px;
+      z-index: 99;
+    }
+  }
+}

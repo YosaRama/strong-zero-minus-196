@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fddd02;
+  overflow: hidden;
+  [data-media-player][data-layout='video']:not([data-fullscreen]) {
+    display: block;
+    border-radius: 0;
+  }
+}
+.mediaPlayer {
+  min-width: 50%;
+}
