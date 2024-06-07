@@ -19,7 +19,7 @@ export default function ContentsHomeMasthead() {
     autoplay: false,
     draggable: false,
     accessibility: true,
-    beforeChange: (current, next) => setActiveSlide(next),
+    beforeChange: (_current: number, next: number) => setActiveSlide(next),
   }
 
   const slideVariants = {

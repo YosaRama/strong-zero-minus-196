@@ -10,11 +10,11 @@ import {
 } from '@vidstack/react/player/layouts/default'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion, useTransform, useScroll } from 'framer-motion'
+import { motion, useTransform, useScroll, MotionValue } from 'framer-motion'
 
 export default function ContentsHomeVideo() {
   const [playerHeight, setPlayerHeight] = useState(0)
-  const [width, setWidth] = useState('100%')
+  const [width, setWidth] = useState<MotionValue<string> | string>('100%')
   const videoPlayerRef = useRef<HTMLDivElement>(null) // Specify the type of ref
   const { scrollY } = useScroll()
   const [isPlaying, setIsPlaying] = useState(false)

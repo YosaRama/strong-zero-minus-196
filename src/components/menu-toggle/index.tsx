@@ -2,7 +2,7 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import s from './index.module.scss'
 
-const Path = (props) => (
+const Path = (props: any) => (
   <motion.path
     fill="transparent"
     strokeWidth="2"
@@ -11,8 +11,13 @@ const Path = (props) => (
   />
 )
 
-export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle} className={s.button}>
+export const MenuToggle = ({ toggle }: { toggle: Function }) => (
+  <button
+    onClick={() => {
+      toggle()
+    }}
+    className={s.button}
+  >
     <svg width="20" height="20" viewBox="0 0 20 20">
       <Path
         variants={{
