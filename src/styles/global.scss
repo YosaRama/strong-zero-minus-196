@@ -20,6 +20,14 @@ body.mobile_nav_open {
 .mobile_logo {
   display: none;
 }
+.masthead_carousel .slick-prev {
+  left: 46px;
+  z-index: 99;
+}
+.masthead_carousel .slick-next {
+  right: 46px;
+  z-index: 99;
+}
 @media (max-width: 768px) {
   .mobile_nav_open .mobile_logo {
     display: block;
