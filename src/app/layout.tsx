@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Barlow_Semi_Condensed } from 'next/font/google'
 import '@/styles/global.scss'
 import MainContainer from '@/components/container'
-import Preloader from '@/components/preloader'
+// import Preloader from '@/components/preloader'
 // import AgeGate from '@/components/age-gate'
 
 const barlow = Barlow_Semi_Condensed({
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={barlow.className}>
         {/* <AgeGate /> */}
-        <Preloader />
+        {/* <Preloader /> */}
         <MainContainer>{children}</MainContainer>
       </body>
     </html>
