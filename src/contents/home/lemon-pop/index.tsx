@@ -46,7 +46,10 @@ export default function ContentsHomeLemonPop() {
             whileInView="onscreen"
             variants={lemonWrapVariants}
           >
-            <motion.div className="w-full lg:w-1/3" variants={lemonVariants}>
+            <motion.div
+              className="w-full lg:w-1/3 mb-5 sm:mb-10 lg:mb-0"
+              variants={lemonVariants}
+            >
               <Image
                 className={s.pop_image}
                 src={'/assets/images/whole.png'}
@@ -55,7 +58,10 @@ export default function ContentsHomeLemonPop() {
                 height={600}
               />
             </motion.div>
-            <motion.div className="w-full lg:w-1/3" variants={lemonVariants}>
+            <motion.div
+              className="w-full lg:w-1/3 mb-5 sm:mb-10 lg:mb-0"
+              variants={lemonVariants}
+            >
               <Image
                 className={s.pop_image}
                 src={'/assets/images/freeze.png'}
@@ -74,7 +80,7 @@ export default function ContentsHomeLemonPop() {
               />
             </motion.div>
           </motion.div>
-          <div className={`mx-auto text-center ${s.content}`}>
+          <div className={`mx-auto text-center ${s.content} pt-8 sm:pt-20`}>
             <p className={s.text}>
               Quench your thirst with MINUS 196, where vodka and soda meet bold
               fruit flavour. Our cutting-edge Freeze Crush Technology™ locks in

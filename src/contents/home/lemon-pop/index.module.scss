@@ -1,6 +1,12 @@
 .wrapper {
-  background-image: url('/assets/images/feature-bg.png');
+  background-image: url('/assets/images/Home_Whole Freeze_Crush_Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -8,7 +14,7 @@
   max-width: 1600px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 170px;
+  padding-bottom: 50px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -19,6 +25,7 @@
 }
 
 .content {
+  margin-top: -70px;
   max-width: 910px;
   padding-left: 20px;
   padding-right: 20px;
@@ -29,4 +36,31 @@
 .anchor_link {
   position: absolute;
   top: calc(50% + 45px);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    background-position: 100% center;
+  }
+  .container {
+    padding-top: 64px;
+    padding-bottom: 104px;
+  }
+  .pop_image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 480px) {
+  .pop_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .content {
+    margin-top: 0;
+    font-size: 16px;
+    max-width: 306px;
+  }
 }
