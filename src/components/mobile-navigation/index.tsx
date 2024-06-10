@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import s from './index.module.scss'
 
 const mobileVariants = {
@@ -35,15 +36,15 @@ export default function MobileNavigation() {
     <nav className={`dropdown-mobile-nav ${s.mobile_nav}`}>
       <motion.ul variants={mobileVariants}>
         <motion.li variants={mobileVariantsItem}>
-          <a href="/" className={s.active}>
+          <Link href="/#the-science" className={s.active}>
             The Science
-          </a>
+          </Link>
         </motion.li>
         <motion.li variants={mobileVariantsItem}>
-          <a href="/">Taste Minus 196</a>
+          <Link href="/taste-minus-196/">Taste Minus 196</Link>
         </motion.li>
         <motion.li variants={mobileVariantsItem}>
-          <a href="/">Where to buy</a>
+          <Link href="/taste-minus-196#where-to-buy">Where to buy</Link>
         </motion.li>
       </motion.ul>
     </nav>

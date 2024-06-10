@@ -38,6 +38,7 @@ export default function ContentsHomeLemonPop() {
   return (
     <>
       <section className={s.wrapper}>
+        <div id="the-science" className={s.anchor_link} />
         <div className={s.container}>
           <motion.div
             className="flex flex-wrap"
@@ -81,7 +82,7 @@ export default function ContentsHomeLemonPop() {
               infusing it in spirits for a refreshing experience.
             </p>
             <p className="mt-20">
-              <Button text="DISCOVER MINUS 196" href="#" />
+              <Button text="DISCOVER MINUS 196" href="/taste-minus-196/" />
             </p>
           </div>
         </div>

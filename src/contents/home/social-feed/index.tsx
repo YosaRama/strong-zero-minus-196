@@ -53,7 +53,7 @@ export default function ContentsHomeSocialFeed() {
       <div className={s.container}>
         <div className={s.column_left}>
           <h3
-            className={`mt-10 2xl:mt-36 mb-10 lg:mb-14 mx-auto lg:mx-0 ${s.heading}`}
+            className={`mt-10 xl:mt-20 2xl:mt-36 mb-10 lg:mb-14 mx-auto lg:mx-0 ${s.heading}`}
           >
             ADD FLAVOUR TO YOUR FEED
           </h3>
@@ -63,9 +63,24 @@ export default function ContentsHomeSocialFeed() {
           </p>
 
           <div className={`mt-10 lg:mt-auto mb-10 ${s.social_media_link}`}>
-            <Button text="Instagram" href="#" variant="outline" newTab={true} />
-            <Button text="Facebook" href="#" variant="outline" newTab={true} />
-            <Button text="Tiktok" href="#" variant="outline" newTab={true} />
+            <Button
+              text="Instagram"
+              href="https://www.instagram.com/minus196.sea/"
+              variant="outline"
+              newTab={true}
+            />
+            <Button
+              text="Facebook"
+              href="https://www.facebook.com/minus196SEA"
+              variant="outline"
+              newTab={true}
+            />
+            <Button
+              text="Tiktok"
+              href="https://www.tiktok.com/@strongzerosea"
+              variant="outline"
+              newTab={true}
+            />
           </div>
         </div>
         <div className={s.column_right}>

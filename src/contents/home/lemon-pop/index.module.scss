@@ -1,7 +1,9 @@
 .wrapper {
   background-image: url('/assets/images/feature-bg.png');
   color: #fff;
+  position: relative;
 }
+
 .container {
   max-width: 1600px;
   padding-left: 20px;
@@ -10,14 +12,21 @@
   margin: 0 auto;
   overflow: hidden;
 }
+
 .pop_image {
   scale: 1.3;
   pointer-events: none;
 }
+
 .content {
   max-width: 910px;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 28px;
   color: #000;
+}
+
+.anchor_link {
+  position: absolute;
+  top: calc(50% + 45px);
 }

@@ -53,7 +53,11 @@ export default function Footer() {
                 <div
                   className={`flex justify-center lg:justify-start ${s.social_media}`}
                 >
-                  <a href="" className="mr-5">
+                  <a
+                    href="https://www.facebook.com/minus196SEA"
+                    className="mr-5"
+                    target="_blank"
+                  >
                     <Image
                       src={'/assets/images/facebook.svg'}
                       alt={'Facebook'}
@@ -61,7 +65,11 @@ export default function Footer() {
                       height={20}
                     />
                   </a>
-                  <a href="" className="mr-5">
+                  <a
+                    href="https://www.instagram.com/minus196.sea/"
+                    className="mr-5"
+                    target="_blank"
+                  >
                     <Image
                       src={'/assets/images/instagram.svg'}
                       alt={'Instagram'}
@@ -69,7 +77,10 @@ export default function Footer() {
                       height={20}
                     />
                   </a>
-                  <a href="">
+                  <a
+                    href="https://www.tiktok.com/@strongzerosea"
+                    target="_blank"
+                  >
                     <Image
                       src={'/assets/images/tiktok.svg'}
                       alt={'Tiktok'}
@@ -110,13 +121,28 @@ export default function Footer() {
                 >
                   <ul className={s.nav_link}>
                     <li>
-                      <a href="">Privacy Policy</a>
+                      <a
+                        href="https://www.beamsuntory.com/index.php/en/privacy-policy"
+                        target="_blank"
+                      >
+                        Privacy Policy
+                      </a>
                     </li>
                     <li>
-                      <a href="">Terms and Conditions</a>
+                      <a
+                        href="https://www.beamsuntory.com/index.php/en/terms-and-conditions"
+                        target="_blank"
+                      >
+                        Terms and Conditions
+                      </a>
                     </li>
                     <li>
-                      <a href="">Cookie Policy</a>
+                      <a
+                        href="https://www.beamsuntory.com/en/cookie-policy"
+                        target="_blank"
+                      >
+                        Cookie Policy
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -131,23 +157,39 @@ export default function Footer() {
                 >
                   <ul className="mt-0 lg:mt-8">
                     <li>
-                      <a href="">Marketing Code</a>
+                      <a
+                        href="https://www.beamsuntory.com/sites/default/files/BSI-Marketing-Code-of-Practice.pdf"
+                        target="_blank"
+                      >
+                        Marketing Code
+                      </a>
                     </li>
                     <li>
-                      <a href="">Supply Chain Transparency</a>
+                      <a
+                        href="https://www.beamsuntory.com/en/supply-chain-transparency"
+                        target="_blank"
+                      >
+                        Supply Chain Transparency
+                      </a>
                     </li>
                   </ul>
                 </div>
               </motion.div>
             </div>
             <div className={s.divider}></div>
-            <div className="flex flex-col sm:flex-row items-center sm:items-end">
-              <Image
-                src={'/assets/images/drink-smart.svg'}
-                alt={'Drink Smart'}
-                width={163}
-                height={39}
-              />
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-end">
+              <a
+                href="https://www.drinksmart.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={'/assets/images/drink-smart.svg'}
+                  alt={'Drink Smart'}
+                  width={163}
+                  height={39}
+                />
+              </a>
             </div>
           </div>
         </div>

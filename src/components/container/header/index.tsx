@@ -1,10 +1,9 @@
 'use client'
 
 import * as React from 'react'
-// import { useRef } from "react"
-// import { useState } from 'react'
 import { useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import s from './index.module.scss'
 
 import { motion, useCycle, Variants } from 'framer-motion'
@@ -49,7 +48,7 @@ export default function Header() {
     <>
       <header className={s.container}>
         <div className={s.logo}>
-          <a className={s.logo__link} href="/">
+          <Link href="/" className={s.logo__link}>
             <Image
               className={s.logo__img}
               src={'/assets/images/logo-black.png'}
@@ -57,24 +56,30 @@ export default function Header() {
               width={115}
               height={86}
             />
-          </a>
+          </Link>
         </div>
         <nav className={s.nav}>
           <ul className={s.nav__list}>
             <li className={s.nav__list__item}>
-              <a className={s.nav__list__item__link} href="/">
+              <Link href="/#the-science" className={s.nav__list__item__link}>
                 The Science
-              </a>
+              </Link>
             </li>
             <li className={s.nav__list__item}>
-              <a className={s.nav__list__item__link} href="/">
+              <Link
+                href="/taste-minus-196/"
+                className={s.nav__list__item__link}
+              >
                 Taste Minus 196
-              </a>
+              </Link>
             </li>
             <li className={s.nav__list__item}>
-              <a className={s.nav__list__item__link} href="/">
+              <Link
+                href="/taste-minus-196#where-to-buy"
+                className={s.nav__list__item__link}
+              >
                 Where to buy
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
