@@ -71,9 +71,6 @@ export default function ContentsHomeMasthead() {
                   height={875}
                   alt="Grape"
                   src={'/assets/images/Home_Masthead-1_Grape.png'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
                 />
               </motion.div>
               <motion.div
@@ -92,9 +89,6 @@ export default function ContentsHomeMasthead() {
                   height={875}
                   alt="Lemon"
                   src={'/assets/images/Home_Masthead-1_Lemon.png'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
                 />
               </motion.div>
               <motion.div
@@ -151,9 +145,6 @@ export default function ContentsHomeMasthead() {
                   height={875}
                   alt="Grape"
                   src={'/assets/images/Home_Masthead-2_Grapefruit.png'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
                 />
               </motion.div>
               <motion.div
@@ -172,9 +163,6 @@ export default function ContentsHomeMasthead() {
                   height={875}
                   alt="Shekwasha"
                   src={'/assets/images/Home_Masthead-2_Shekwasha.png'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
                 />
               </motion.div>
               <motion.div
@@ -193,9 +181,6 @@ export default function ContentsHomeMasthead() {
                   height={875}
                   alt="Lemon"
                   src={'/assets/images/Home_Masthead-2_Lemon.png'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
                 />
               </motion.div>
               <motion.div
