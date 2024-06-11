@@ -31,22 +31,30 @@ const mobileVariantsItem = {
   },
 }
 
-export default function MobileNavigation() {
-  return (
-    <nav className={`dropdown-mobile-nav ${s.mobile_nav}`}>
-      <motion.ul variants={mobileVariants}>
-        <motion.li variants={mobileVariantsItem}>
-          <Link href="/#the-science" className={s.active}>
-            The Science
-          </Link>
-        </motion.li>
-        <motion.li variants={mobileVariantsItem}>
-          <Link href="/taste-minus-196/">Taste Minus 196</Link>
-        </motion.li>
-        <motion.li variants={mobileVariantsItem}>
-          <Link href="/taste-minus-196#where-to-buy">Where to buy</Link>
-        </motion.li>
-      </motion.ul>
-    </nav>
-  )
+interface MobileNavigationProps {
+  toggleOpen: () => void
 }
+
+const MobileNavigation: React.FC<MobileNavigationProps> = ({ toggleOpen }) => (
+  <nav className={`dropdown-mobile-nav ${s.mobile_nav}`}>
+    <motion.ul variants={mobileVariants}>
+      <motion.li variants={mobileVariantsItem}>
+        <Link href="/#the-science" onClick={toggleOpen}>
+          The Science
+        </Link>
+      </motion.li>
+      <motion.li variants={mobileVariantsItem}>
+        <Link href="/taste-minus-196/" onClick={toggleOpen}>
+          Taste Minus 196
+        </Link>
+      </motion.li>
+      <motion.li variants={mobileVariantsItem}>
+        <Link href="/taste-minus-196#where-to-buy" onClick={toggleOpen}>
+          Where to buy
+        </Link>
+      </motion.li>
+    </motion.ul>
+  </nav>
+)
+
+export default MobileNavigation

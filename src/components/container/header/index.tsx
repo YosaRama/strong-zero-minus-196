@@ -87,18 +87,19 @@ export default function Header() {
       <motion.div
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        className={s.mobile_nav}
+        className={`mobile_nav`}
       >
         <motion.div className={s.mobile_nav_background} variants={sidebar} />
-        <Image
-          className="mobile_logo"
-          src={'/assets/images/logo-white.png'}
-          alt={'Strong Zero'}
-          width={71}
-          height={52}
-        />
-        <MobileNavigation />
-        <MenuToggle toggle={() => toggleOpen()} />
+        <Link href="/" className="mobile_logo" onClick={() => toggleOpen(0)}>
+          <Image
+            src={'/assets/images/logo-white.png'}
+            alt={'Strong Zero'}
+            width={71}
+            height={52}
+          />
+        </Link>
+        <MobileNavigation toggleOpen={toggleOpen} />
+        <MenuToggle toggle={toggleOpen} />
       </motion.div>
     </>
   )

@@ -4,6 +4,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 17px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99998;
+  background-color: #fff;
 }
 
 .logo {
@@ -35,8 +40,10 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
-  line-height: 100%; /* 20px */
+  line-height: 100%;
+  /* 20px */
   text-transform: uppercase;
+
   &::after {
     content: '';
     position: absolute;
@@ -80,15 +87,11 @@
   .nav__list {
     display: none;
   }
+
   .mobile_nav {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // bottom: 0;
-    // width: 100vw;
-    // height: 100vh;
-    z-index: 9997;
+    z-index: 999999;
   }
+
   .mobile_nav_background {
     position: relative;
     top: 0;
@@ -96,9 +99,11 @@
     bottom: 0;
     width: 100%;
     background: #000;
-    z-index: 9998;
+    z-index: 999999;
   }
+
   .logo__img {
     width: 63px;
+    z-index: 999999;
   }
 }

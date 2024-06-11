@@ -4,6 +4,7 @@ import { useState } from 'react'
 import s from './index.module.scss'
 import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
+import Link from 'next/link'
 
 const wrapVariants: Variants = {
   hidden: {
@@ -43,13 +44,15 @@ export default function Footer() {
           <div className={s.container}>
             <div className="flex flex-wrap">
               <motion.div className="w-full lg:w-1/2" variants={childVariants}>
-                <Image
-                  className={`mx-auto sm:ml-0 ${s.logo__img}`}
-                  src={'/assets/images/logo-white.png'}
-                  alt={'Strong Zero'}
-                  width={115}
-                  height={84}
-                />
+                <Link href="/">
+                  <Image
+                    className={`mx-auto sm:ml-0 ${s.logo__img}`}
+                    src={'/assets/images/logo-white.png'}
+                    alt={'Strong Zero'}
+                    width={115}
+                    height={84}
+                  />
+                </Link>
                 <div
                   className={`flex justify-center lg:justify-start ${s.social_media}`}
                 >
@@ -103,7 +106,12 @@ export default function Footer() {
                 <div
                   className={`${s.nav_content} ${openSection === 'contact' ? s.open : ''}`}
                 >
-                  <a href="mailto:info@minus196.com.sg">info@minus196.com.sg</a>
+                  <a
+                    href="https://www.facebook.com/messages/t/101299685165228/"
+                    target="_blank"
+                  >
+                    Message us on Facebook
+                  </a>
                 </div>
               </motion.div>
               <motion.div
@@ -177,7 +185,7 @@ export default function Footer() {
               </motion.div>
             </div>
             <div className={s.divider}></div>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-end">
+            <div className="flex flex-row justify-center lg:justify-end">
               <a
                 href="https://www.drinksmart.com/"
                 target="_blank"
@@ -193,6 +201,15 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        {/* <div className={s.copyright}>
+          <div className={s.container}>
+            <p>
+              -196™ READY-T0-DRINK 9% ALC./VOL BEAM SUNTORY ASIA PTE LTD,
+              SINGAPORE ©2024 BEAM SUNTORY ASIA PTE LTD. * -196™
+              SUNTORY&apos;S NO.1 PREMIX BRAND IN JAPAN, 2022 SALES VOLUME, IWSR
+            </p>
+          </div>
+        </div> */}
       </motion.footer>
     </>
   )
